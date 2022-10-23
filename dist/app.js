@@ -5,6 +5,8 @@ new Vue({
       known: 'known.json',
       doc_title: 'Nano.to - Nano Username & Checkout UI',
       title: 'Nano.to',
+      translate: window.translate,
+      language: window.navigator.userLanguage || window.navigator.language,
       convert: NanocurrencyWeb.tools.convert,
       error: false,
       status: '',
@@ -42,6 +44,8 @@ new Vue({
       }
     },
     mounted() {
+
+      // console.log( this.translate[this.language] )
 
       var self = this
 
